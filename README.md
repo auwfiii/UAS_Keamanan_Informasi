@@ -70,8 +70,6 @@ File **`Laporan Analisis UAS Kemanan Informasi.pdf`** menyajikan penjelasan tekn
 
 ## ⚙️ Cara Menjalankan Proyek (Contoh, sesuaikan dengan langkah Docker Anda)
 
-Karena Anda menggunakan Docker, langkah-langkahnya mungkin sedikit berbeda. Berikut adalah contoh langkah-langkah umum. **Mohon sesuaikan dengan instruksi *setup* Docker yang lebih spesifik jika Anda memiliki prosedur berbeda.**
-
 ### 1. Clone repositori
 
 ```bash

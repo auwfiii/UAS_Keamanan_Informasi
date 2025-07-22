@@ -126,21 +126,21 @@ Aplikasi akan tersedia di *port* yang telah Anda tentukan di Docker atau `.env` 
 (Anda bisa menambahkan *screenshot* di sini. Disarankan untuk membuat folder `screenshots/` dan meletakkan gambar di sana, lalu tautkan seperti contoh di bawah.)
 
   * **Dashboard**
-  *  ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/dashboard.png?raw=true)
+    ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/dashboard.png?raw=true)
   * **Data Supir**
-  * ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/supir.png?raw=true)
+    ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/supir.png?raw=true)
   * **Data Perjalanan**
-  * ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/perjalanan.png?raw=true)
+    ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/perjalanan.png?raw=true)
   * **Data Kendaraan**
-  * ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/kendaraan.png?raw=true)
+    ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/kendaraan.png?raw=true)
   * **Data Trayek**
-  * ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/trayek.png?raw=true)
+    ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/trayek.png?raw=true)
 
 -----
 
 ## 👤 Developer
 
-**Alfianita Ingsiany** – [GitHub Profile](https://www.google.com/search?q=https://github.com/auwfiii)
+**Alfianita Ingsiany 20210801173** – [GitHub Profile](https://github.com/auwfiii)
 -----
 
 ```

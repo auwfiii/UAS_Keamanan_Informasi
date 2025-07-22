@@ -1,61 +1,142 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚗 Manajemen Data Supir, Kendaraan, dan Perjalanan Menggunakan Laravel + Filament
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi ini dirancang untuk mengelola data supir, kendaraan, dan perjalanan secara terintegrasi dan aman menggunakan *framework* **Laravel 12** dan panel admin **Filament v3**.
 
-## About Laravel
+Sistem ini memungkinkan pengguna untuk:
+* Menambahkan dan mengelola data supir beserta detail identitasnya.
+* Menghubungkan supir dengan kendaraan tertentu.
+* Mencatat dan melacak data perjalanan berdasarkan trayek dan jadwal.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 Modul Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 1. Manajemen Supir
 
-## Learning Laravel
+Modul ini menyimpan data-data penting mengenai supir seperti:
+* Nama lengkap
+* Nomor identitas (KTP/SIM)
+* Tanggal lahir, alamat, dan nomor telepon
+* Relasi dengan kendaraan dan data perjalanan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+🛠 Implementasi menggunakan model `Supir` dan *resource* Filament `SupirResource`.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 2. Manajemen Kendaraan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Menampung informasi kendaraan seperti:
+* Nomor polisi
+* Jenis kendaraan
+* Merek dan kapasitas
+* Status ketersediaan kendaraan
 
-## Laravel Sponsors
+Setiap kendaraan dapat terhubung ke lebih dari satu supir (opsional).
+🛠 Implementasi menggunakan model `Kendaraan`.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3. Manajemen Perjalanan
 
-### Premium Partners
+Mencatat aktivitas perjalanan yang dilakukan oleh supir, termasuk:
+* Trayek atau rute perjalanan
+* Kendaraan yang digunakan
+* Tanggal dan waktu keberangkatan
+* Tujuan  perjalanan
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Perjalanan ini terkait langsung dengan entitas `Supir` dan `Kendaraan` melalui relasi `belongsTo`.
+🛠 Model yang digunakan: `Perjalanan` dan `Trayek`.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🔐 Keamanan Data
 
-## Code of Conduct
+Sebagai bagian dari mata kuliah Keamanan Informasi, sistem ini memperhatikan aspek berikut:
+* Penggunaan migrasi Laravel untuk struktur data yang aman.
+* Koneksi *database* terenkripsi melalui *environment* `.env`.
+* Manajemen otentikasi Laravel bawaan (opsional, jika diimplementasikan).
+* Isolasi *environment* menggunakan **Docker** agar sistem tidak mudah diakses dari luar tanpa kontrol.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📝 Laporan UAS
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+File **`Analisis_Docker_Laravel.pdf`** menyajikan penjelasan teknis mengenai:
+* Setup Docker dan Laravel.
+* Penyesuaian `.env`.
+* Migrasi *database*.
+* Pemindahan file konfigurasi.
+* Struktur *repository* dan hasil implementasi.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## ⚙️ Cara Menjalankan Proyek (Contoh, sesuaikan dengan langkah Docker Anda)
+
+Karena Anda menggunakan Docker, langkah-langkahnya mungkin sedikit berbeda. Berikut adalah contoh langkah-langkah umum. **Mohon sesuaikan dengan instruksi *setup* Docker yang lebih spesifik jika Anda memiliki prosedur berbeda.**
+
+### 1. Clone repositori
+
+```bash
+git clone [https://github.com/username/manajemen-data-supir.git](https://github.com/username/manajemen-data-supir.git)
+cd manajemen-data-supir
+````
+
+### 2\. Atur Environment dan Jalankan Docker
+
+```bash
+cp .env.example .env
+# Sesuaikan pengaturan database di .env jika perlu, misal untuk koneksi Docker
+# Contoh: DB_HOST=mysql_container_name (jika menggunakan docker-compose)
+
+# Bangun dan jalankan container Docker (contoh untuk docker-compose)
+docker-compose up -d --build
+```
+
+### 3\. Install Dependensi dan Migrasi Database (di dalam container)
+
+Anda perlu menjalankan perintah ini di dalam *container* PHP/Laravel Anda.
+
+```bash
+# Masuk ke dalam container PHP/Laravel (ganti 'nama-container-anda' jika tahu)
+docker-compose exec app bash # atau nama-service-php-anda
+
+# Di dalam container:
+composer install
+php artisan key:generate
+php artisan migrate --seed # Gunakan --seed jika ada seeder
+exit # Keluar dari container
+```
+
+### 4\. Jalankan Node.js Dependencies (jika Filament atau Vite membutuhkan)
+
+```bash
+# Masuk lagi ke container (jika perlu) atau jalankan dari host jika ada Node.js terinstal
+# Di dalam container (jika Dockerfile sudah menginstal Node.js)
+npm install
+npm run dev # atau npm run build
+
+# Jika tidak ada Node.js di container, mungkin perlu dijalankan di host atau container terpisah
+```
+
+### 5\. Akses Aplikasi
+
+Aplikasi akan tersedia di *port* yang telah Anda tentukan di Docker atau `.env` Anda, biasanya:
+`http://localhost:8000` atau `http://localhost`.
+
+-----
+
+## 📷 Tampilan
+
+(Anda bisa menambahkan *screenshot* di sini. Disarankan untuk membuat folder `screenshots/` dan meletakkan gambar di sana, lalu tautkan seperti contoh di bawah.)
+
+  * **Dashboard**
+  * **Data Supir**
+  * **Data Perjalanan**
+  * **Data Kendaraan**
+  * **Data Trayek**
+
+-----
+
+## 👤 Developer
+
+**Alfianita Ingsiany** – [GitHub Profile](https://www.google.com/search?q=https://github.com/auwfiii)
+-----
+
+```
+```

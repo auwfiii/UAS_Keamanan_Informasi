@@ -15,8 +15,7 @@ Sistem ini memungkinkan pengguna untuk:
 
 Modul ini menyimpan data-data penting mengenai supir seperti:
 * Nama lengkap
-* Nomor identitas (KTP/SIM)
-* Tanggal lahir, alamat, dan nomor telepon
+* Alamat dan nomor telepon
 * Relasi dengan kendaraan dan data perjalanan
 
 🛠 Implementasi menggunakan model `Supir` dan *resource* Filament `SupirResource`.
@@ -26,8 +25,9 @@ Modul ini menyimpan data-data penting mengenai supir seperti:
 Menampung informasi kendaraan seperti:
 * Nomor polisi
 * Jenis kendaraan
-* Merek dan kapasitas
-* Status ketersediaan kendaraan
+* Merek kendaraan
+* Tahun Kendaraan
+* Supir Kendaraan
 
 Setiap kendaraan dapat terhubung ke lebih dari satu supir (opsional).
 🛠 Implementasi menggunakan model `Kendaraan`.
@@ -57,12 +57,14 @@ Sebagai bagian dari mata kuliah Keamanan Informasi, sistem ini memperhatikan asp
 
 ## 📝 Laporan UAS
 
-File **`Analisis_Docker_Laravel.pdf`** menyajikan penjelasan teknis mengenai:
-* Setup Docker dan Laravel.
+File **`Laporan Analisis UAS Kemanan Informasi.pdf`** menyajikan penjelasan teknis mengenai:
+* Pendahuluan
+* Tujuan
+* Stuktur
+* Konfiguransi Docker
 * Penyesuaian `.env`.
-* Migrasi *database*.
-* Pemindahan file konfigurasi.
 * Struktur *repository* dan hasil implementasi.
+* Kesimpulan
 
 ---
 

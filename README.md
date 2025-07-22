@@ -125,8 +125,6 @@ Aplikasi akan tersedia di *port* yang telah Anda tentukan di Docker atau `.env` 
 
 ## 📷 Tampilan
 
-(Anda bisa menambahkan *screenshot* di sini. Disarankan untuk membuat folder `screenshots/` dan meletakkan gambar di sana, lalu tautkan seperti contoh di bawah.)
-
   * **Dashboard**
     ![alt text](https://github.com/auwfiii/UAS_Keamanan_Informasi/blob/main/Screenshoot/dashboard.png?raw=true)
   * **Data Supir**

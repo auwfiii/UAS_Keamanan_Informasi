@@ -11,7 +11,7 @@ class Perjalanan extends Model
         'kendaraan_id',
         'trayek_id',
         'tanggal_berangkat',
-        'tanggal_pulang',
+        'tanggal_kembali',
     ];
 
     public function supir()
